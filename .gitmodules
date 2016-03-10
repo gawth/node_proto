@@ -1,0 +1,3 @@
+[submodule "hotel-proto"]
+	path = hotel-proto
+	url = git@github.com:gawth/hotel-proto.git

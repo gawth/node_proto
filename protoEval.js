@@ -1,7 +1,7 @@
 var ProtoBuf = require('protobufjs');
 var httpUtil = require('./httpUtil.js');
 
-var builder = ProtoBuf.loadProtoFile("/Users/alan/dev/go/src/github.com/gawth/proto_test/hotel.proto");
+var builder = ProtoBuf.loadProtoFile("./hotel-proto/hotel.proto");
 var Hotels = builder.build("proto.hotel");
 var HotelDetailsResponseModel = Hotels.HotelDetailsResponseModel;
 var Hotel = Hotels.Hotel;

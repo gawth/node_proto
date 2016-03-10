@@ -2,7 +2,7 @@ var ProtoBuf = require('protocol-buffers');
 var httpUtil = require('./httpUtil.js');
 var fs = require('fs');
 
-var messages = ProtoBuf(fs.readFileSync("/Users/alan/dev/go/src/github.com/gawth/proto_test/hotel.proto"));
+var messages = ProtoBuf(fs.readFileSync("./hotel-proto/hotel.proto"));
 
 var data = JSON.stringify({});
 var options = {
