@@ -8,19 +8,19 @@ var suite = new benchmark.Suite();
 
 var testdata = JSON.stringify({});
 var testPBOptions = {
-    host: 'provider-data-dev',
-    port: '80',
-    path: '/v3/retrievePBByHotelId',
-    method: 'POST',
+    host: '10.211.55.3',
+    port: '8888',
+    path: '/testprotobuf',
+    method: 'GET',
     headers: {
         'Content-Type': 'application/x-protobuf'
     }
 };
 var testJsonOptions = {
-    host: 'provider-data-dev',
-    port: '80',
-    path: '/v3/retrieveByHotelId',
-    method: 'POST',
+    host: '10.211.55.3',
+    port: '8888',
+    path: '/testjson',
+    method: 'GET',
     headers: {
         'Content-Type': 'application/json'
     }
@@ -61,7 +61,7 @@ suite
     'fn': function(deferred) {
         suite.name;
         var converted = json_target.handleResults(jsdata);
-        if (typeof converted.hotels[0].hotelCode != "string") { throw "Return type of serialization test not recognised";}
+        if (typeof converted.Hotels[0].HotelCode != "string") { throw "Return type of serialization test not recognised";}
         deferred.resolve();
     }
 })

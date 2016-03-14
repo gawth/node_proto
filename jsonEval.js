@@ -2,10 +2,10 @@ var httpUtil = require('./httpUtil.js');
 
 var data = JSON.stringify({});
 var options = {
-    host: 'provider-data-dev',
-    port: '80',
-    path: '/v3/retrieveByHotelId',
-    method: 'POST',
+    host: '10.211.55.3',
+    port: '8888',
+    path: '/testjson',
+    method: 'GET',
     headers: {
         'Content-Type': 'application/json'
     }
