@@ -12,6 +12,7 @@
     "benchmark": "^2.1.0",
     "microtime": "^2.0.0",
     "protobufjs": "^5.0.1",
-    "protocol-buffers": "^3.1.6"
+    "protocol-buffers": "^3.1.6",
+    "zmq": "^2.14.0"
   }
 }

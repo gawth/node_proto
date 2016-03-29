@@ -3,6 +3,7 @@ var proto_target = require("./protoEval.js");
 var json_target = require("./jsonEval.js");
 var pb2_target = require("./protoV2Eval.js");
 var httpUtil = require("./httpUtil.js");
+var mq = require("./mq.js");
 
 var suite = new benchmark.Suite();
 
@@ -50,6 +51,24 @@ suite
     'fn': function(deferred) {
         suite.name;
         httpUtil.doHttpRequest(testJsonOptions, testdata, function(res) {
+            deferred.resolve();
+        });
+    }
+})
+.add('0mqEndPointProtoBufTest', {
+    'defer': true,
+    'fn': function(deferred) {
+        suite.name;
+        mq.sendzmq("protobuf", function(res) {
+            deferred.resolve();
+        });
+    }
+})
+.add('0mqEndPointJsonTest', {
+    'defer': true,
+    'fn': function(deferred) {
+        suite.name;
+        mq.sendzmq("json", function(res) {
             deferred.resolve();
         });
     }
